@@ -1,10 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import MaterialIcon from './src';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text>logo</Text>
+      <MaterialIcon />
     </View>
   );
 };

@@ -43,7 +43,7 @@ export const $file = props => {
      sed -i '' -e 's/<path/\n<Path/' "$item"
      sed -i '' -e 's/<\/svg>//' "$item"  #remove last svg tag
      sed -n '2p' "$item" >> $iconPath/$file.js
-     echo "    </Svg>
+     echo "</Svg>
   );
 };
 " >> $iconPath/$file.js
