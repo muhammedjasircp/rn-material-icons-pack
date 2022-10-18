@@ -1,5 +1,6 @@
 file=""
 utilsPath=./
+temp=sample.svg
 
 echo "Enter the type:"
 read type
@@ -32,6 +33,7 @@ numberToWords () {
 files=`find $svgPath -type f -name "*.svg"`
 for item in $files;
 do
+    cp $item $temp
     file=`basename "$i" .svg`  #get file name
     numberToWords `basename "$item" .svg` 
     touch $iconPath/$file.js # create a js file using the name
@@ -44,11 +46,13 @@ export const $file = props => {
     <Svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' {...props}>
         <Path fill='none' d='M0 0h24v24H0z' />" > $iconPath/$file.js
 
-     sed -i '' -e 's/<path/\n<Path/' "$item"
-     sed -i '' -e 's/<\/svg>//' "$item"  #remove last svg tag
-     sed -n '2p' "$item" >> $iconPath/$file.js
+     sed -i '' -e 's/<path/\n<Path/' "$temp"
+     sed -i '' -e 's/<path/<Path/g' "$temp"
+     sed -i '' -e 's/<\/svg>//' "$temp"  #remove last svg tag
+     sed -n '2p' "$temp" >> $iconPath/$file.js
      echo "</Svg>
   );
 };
 " >> $iconPath/$file.js
+rm $temp
 done
