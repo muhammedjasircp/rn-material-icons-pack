@@ -34,7 +34,6 @@ files=`find $svgPath -type f -name "*.svg"`
 for item in $files;
 do
     cp $item $temp
-    file=`basename "$i" .svg`  #get file name
     numberToWords `basename "$item" .svg` 
     touch $iconPath/$file.js # create a js file using the name
 
