@@ -1,5 +1,5 @@
 file=""
-utilsPath=./utils
+utilsPath=./
 svgPath=../svgs/round
 iconPath=../icons/round
 
