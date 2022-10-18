@@ -1,0 +1,1 @@
+# rn-material-icons-pack
