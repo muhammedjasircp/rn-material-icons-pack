@@ -19,15 +19,15 @@ const MaterialIcon = ({
   let Component;
 
   if (type === 'round') {
-    Component = roundIcons[iconName];
+    Component = roundIcons && roundIcons[iconName];
   } else if (type === 'filled') {
-    Component = filledIcons[iconName];
+    Component = filledIcons && filledIcons[iconName];
   } else if (type === 'outlined') {
-    Component = outlinedIcons[iconName];
+    Component = outlinedIcons && outlinedIcons[iconName];
   } else if (type === 'sharp') {
-    Component = sharpIcons[iconName];
+    Component = sharpIcons && sharpIcons[iconName];
   } else {
-    Component = twoToneIcons[iconName];
+    Component = twoToneIcons && twoToneIcons[iconName];
   }
 
   return Component ? (
