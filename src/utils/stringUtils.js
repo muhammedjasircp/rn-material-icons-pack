@@ -35,7 +35,7 @@ export const convertName = name => {
         break;
     }
   } else {
-    firstLetter.toUpperCase();
+    firstLetter = firstLetter.toUpperCase();
   }
   return firstLetter + name.slice(1);
 };
