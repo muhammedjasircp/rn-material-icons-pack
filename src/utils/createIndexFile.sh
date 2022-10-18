@@ -14,8 +14,7 @@ echo "" > $indexFile
 for item in $files;
 do
     fileName=`basename "$item" .js`  #get file name
-    echo $fileName $item
-    echo "import $fileName from './$fileName.js' " >>  $indexFile
+    echo "import {$fileName} from './$type/$fileName.js' " >>  $indexFile
 done
 
 echo "\nexport const "$type"Icons = {" >>  $indexFile
