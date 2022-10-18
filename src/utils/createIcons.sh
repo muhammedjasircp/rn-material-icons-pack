@@ -1,7 +1,7 @@
 file=""
-utilsPath=./src/utils
-svgPath=./src/svgs/round
-iconPath=./src/icons/round
+utilsPath=./utils
+svgPath=../svgs/round
+iconPath=../icons/round
 
 numberToWords () {
     letter=`echo $1 | cut -c1-1`
