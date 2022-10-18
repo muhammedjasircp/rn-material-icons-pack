@@ -1,7 +1,11 @@
 file=""
 utilsPath=./
-svgPath=../svgs/round
-iconPath=../icons/round
+
+echo "Enter the type:"
+read type
+
+svgPath=../svgs/$type
+iconPath=../icons/$type
 
 numberToWords () {
     letter=`echo $1 | cut -c1-1`
