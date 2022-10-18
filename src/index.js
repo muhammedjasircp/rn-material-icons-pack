@@ -1,13 +1,13 @@
 import React from 'react';
 import {Text} from 'react-native';
-import {
-  roundIcons,
-  filledIcons,
-  outlinedIcons,
-  sharpIcons,
-  twoToneIcons,
-} from './icons';
+
 import {convertName} from './utils/stringUtils';
+
+import {filledIcons} from './icons/filledIcons';
+import {outlinedIcons} from './icons/outlinedIcons';
+import {roundIcons} from './icons/roundIcons';
+import {sharpIcons} from './icons/sharpIcons';
+import {twoToneIcons} from './icons/twoToneIcons';
 
 const MaterialIcon = ({
   name = 'abc',
@@ -16,22 +16,19 @@ const MaterialIcon = ({
   type = 'round',
 }) => {
   const iconName = convertName(name);
-  let Component;
+  const Icon =
+    type === 'round'
+      ? roundIcons[iconName]
+      : type === 'filled'
+      ? filledIcons[iconName]
+      : type === 'outlined'
+      ? outlinedIcons[iconName]
+      : type === 'sharp'
+      ? sharpIcons[iconName]
+      : twoToneIcons[iconName];
 
-  if (type === 'round') {
-    Component = roundIcons && roundIcons[iconName];
-  } else if (type === 'filled') {
-    Component = filledIcons && filledIcons[iconName];
-  } else if (type === 'outlined') {
-    Component = outlinedIcons && outlinedIcons[iconName];
-  } else if (type === 'sharp') {
-    Component = sharpIcons && sharpIcons[iconName];
-  } else {
-    Component = twoToneIcons && twoToneIcons[iconName];
-  }
-
-  return Component ? (
-    <Component height={size} width={size} fill={color} />
+  return Icon ? (
+    <Icon height={size} width={size} fill={color} />
   ) : (
     <Text>Invalid Icon Name</Text>
   );
