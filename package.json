@@ -1,7 +1,7 @@
 {
   "name": "rnmaterialicons",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -27,5 +27,17 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "description": "Material Icons for React Native",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammedjasircp/rn-material-icons-pack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhammedjasircp/rn-material-icons-pack/issues"
+  },
+  "homepage": "https://github.com/muhammedjasircp/rn-material-icons-pack#readme"
 }
