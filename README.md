@@ -31,7 +31,7 @@ npm install react-native-svg
 ### Usage
 
 ```javascript
-import {MaterialIcon, TYPES} from 'rnmaterialicons/src';
+import {MaterialIcon, TYPES} from 'rnmaterialicons';
 ```
 
 ```javascript
@@ -45,4 +45,4 @@ import {MaterialIcon, TYPES} from 'rnmaterialicons/src';
 | name  | `remixicon-fill` | Name of the icon. Explore [MaterialIcons](https://marella.me/material-design-icons/demo/svg/) |
 | size  | `24`             | Size of the icon                                                                              |
 | color | `black`          | Color of the icon                                                                             |
-| type  | `round`          | 'round','filled','outlined','sharp'                                                           |
+| type  | `round`          | `round` `filled` `outlined` `sharp`                                                           |
