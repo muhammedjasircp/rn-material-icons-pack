@@ -7,9 +7,8 @@ import {filledIcons} from './icons/filledIcons';
 import {outlinedIcons} from './icons/outlinedIcons';
 import {roundIcons} from './icons/roundIcons';
 import {sharpIcons} from './icons/sharpIcons';
-import {twoToneIcons} from './icons/twoToneIcons';
 
-const MaterialIcon = ({
+export const MaterialIcon = ({
   name = 'abc',
   color = 'black',
   size = 24,
@@ -23,9 +22,7 @@ const MaterialIcon = ({
       ? filledIcons[iconName]
       : type === 'outlined'
       ? outlinedIcons[iconName]
-      : type === 'sharp'
-      ? sharpIcons[iconName]
-      : twoToneIcons[iconName];
+      : sharpIcons[iconName];
 
   return Icon ? (
     <Icon height={size} width={size} fill={color} />
@@ -34,4 +31,9 @@ const MaterialIcon = ({
   );
 };
 
-export default MaterialIcon;
+export const TYPES = {
+  ROUND: 'round',
+  FILLED: 'filled',
+  SHARP: 'sharp',
+  OUTLINED: 'outlined',
+};

@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import MaterialIcon from './src';
+import {MaterialIcon} from './src';
 
 const App = () => {
   return (

@@ -1,6 +1,6 @@
 {
   "name": "rnmaterialicons",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "scripts": {
     "android": "react-native run-android",
@@ -24,6 +24,9 @@
     "metro-react-native-babel-preset": "0.72.3",
     "react-test-renderer": "18.1.0",
     "react-native-svg": "^13.4.0"
+  },
+  "peerDependencies": {
+    "react-native-svg": "*"
   },
   "jest": {
     "preset": "react-native"
